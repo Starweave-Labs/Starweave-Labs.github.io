@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://starweave-labs.github.io/sitemap.xml

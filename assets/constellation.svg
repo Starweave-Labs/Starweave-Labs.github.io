@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="540" viewBox="0 0 600 540" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">星织：相遇的灵感，交织的作品</title>
+  <desc id="description">原创概念星图。大小不同的四角星用细线相连，灵感、设计与代码围绕一颗镂空的薄荷色星交织。</desc>
+  <defs>
+    <path id="four-point" fill-rule="evenodd" d="M0-22 6-6 22 0 6 6 0 22-6 6-22 0-6-6Z M0-5-5 0 0 5 5 0Z" clip-rule="evenodd"/>
+    <path id="small-star" d="M0-7 2-2 7 0 2 2 0 7-2 2-7 0-2-2Z"/>
+  </defs>
+
+  <!-- A quiet drafting frame, not an interactive diagram. -->
+  <g stroke="#293c50" stroke-width="1">
+    <path d="M30 87V57H60M540 57H570V87M30 453V483H60M540 483H570V453"/>
+    <path d="M294 36H306M300 30V42M294 504H306M300 498V510M17 264H29M23 258V270M571 264H583M577 258V270"/>
+    <ellipse cx="307" cy="263" rx="205" ry="189" stroke-dasharray="2 9"/>
+    <path d="M75 264H535M307 63V463" stroke-dasharray="2 10"/>
+    <path d="M112 115 505 413M119 423 495 100" opacity=".6"/>
+  </g>
+
+  <!-- Curved threads cross the open space between distinct nodes. -->
+  <g stroke="#49677e" stroke-width="1.2">
+    <path d="M109 151C167 151 210 196 287 247M332 277C381 308 419 353 444 415"/>
+    <path d="M476 112C418 123 365 178 326 240M295 288C258 350 210 385 156 410"/>
+    <path d="M109 151C244 73 348 53 476 112"/>
+    <path d="M476 112C528 209 513 325 444 415"/>
+    <path d="M444 415C345 470 245 463 156 410"/>
+    <path d="M156 410C87 325 67 246 109 151"/>
+    <path d="M109 151C227 234 327 364 444 415" stroke="#79a494"/>
+    <path d="M156 410C231 283 354 192 476 112" stroke="#79a494"/>
+    <path d="M184 96 310 264 523 298" stroke-dasharray="4 7"/>
+    <path d="M85 315 310 264 339 447" stroke-dasharray="4 7"/>
+  </g>
+
+  <!-- Woven loops are deliberately offset rather than a globe grid. -->
+  <g stroke="#57776f" stroke-width="1" opacity=".8">
+    <ellipse cx="310" cy="264" rx="129" ry="56" transform="rotate(-36 310 264)"/>
+    <ellipse cx="310" cy="264" rx="129" ry="56" transform="rotate(36 310 264)"/>
+  </g>
+
+  <g fill="#8d9fb3">
+    <circle cx="184" cy="96" r="2.5"/>
+    <circle cx="523" cy="298" r="2.5"/>
+    <circle cx="339" cy="447" r="2.5"/>
+    <circle cx="85" cy="315" r="2.5"/>
+    <circle cx="227" cy="132" r="1.5"/>
+    <circle cx="397" cy="92" r="1.5"/>
+    <circle cx="514" cy="192" r="1.5"/>
+    <circle cx="508" cy="349" r="1.5"/>
+    <circle cx="387" cy="443" r="1.5"/>
+    <circle cx="237" cy="443" r="1.5"/>
+    <circle cx="119" cy="358" r="1.5"/>
+    <circle cx="89" cy="230" r="1.5"/>
+  </g>
+  <g fill="#a7f3d0">
+    <use href="#small-star" transform="translate(66 103) scale(.65)"/>
+    <use href="#small-star" transform="translate(408 62) scale(.6)"/>
+    <use href="#small-star" transform="translate(539 398) scale(.7)"/>
+    <use href="#small-star" transform="translate(229 482) scale(.5)"/>
+  </g>
+  <g fill="#aab9ca">
+    <circle cx="51" cy="219" r="1.5"/>
+    <circle cx="528" cy="151" r="1.5"/>
+    <circle cx="121" cy="464" r="1.5"/>
+    <circle cx="549" cy="342" r="1.5"/>
+    <circle cx="363" cy="42" r="1.5"/>
+  </g>
+
+  <!-- Individual stars share a shape, not a size or a role. -->
+  <g>
+    <circle cx="109" cy="151" r="30" fill="#0a101b" stroke="#526d85"/>
+    <use href="#four-point" transform="translate(109 151) scale(.7)" fill="#f2efe7"/>
+    <circle cx="476" cy="112" r="26" fill="#0a101b" stroke="#526d85"/>
+    <use href="#four-point" transform="translate(476 112) scale(.55)" fill="#a7f3d0"/>
+    <circle cx="156" cy="410" r="23" fill="#0a101b" stroke="#526d85"/>
+    <use href="#four-point" transform="translate(156 410) scale(.45)" fill="#aab9ca"/>
+    <circle cx="444" cy="415" r="31" fill="#0a101b" stroke="#526d85"/>
+    <use href="#four-point" transform="translate(444 415) scale(.75)" fill="#f2efe7"/>
+  </g>
+
+  <!-- The central mark leaves its negative-space diamond open. -->
+  <circle cx="310" cy="264" r="57" fill="#0a101b"/>
+  <circle cx="310" cy="264" r="66" stroke="#526d85" stroke-dasharray="1 6"/>
+  <path d="M310 190V198M310 330V338M236 264H244M376 264H384" stroke="#a7f3d0"/>
+  <use href="#four-point" transform="translate(310 264) scale(2.15)" fill="#a7f3d0"/>
+
+  <g fill="#aab9ca" font-family="SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="2">
+    <text x="83" y="104">IDEAS</text>
+    <text x="451" y="67">DESIGN</text>
+    <text x="423" y="473">CODE</text>
+    <text x="122" y="454">CRAFT</text>
+  </g>
+  <text x="310" y="365" fill="#a7f3d0" font-family="SFMono-Regular, Consolas, monospace" font-size="10" letter-spacing="2.6" text-anchor="middle">WEAVE TOGETHER</text>
+  <g stroke="#526d85">
+    <path d="M209 361H238M382 361H411"/>
+  </g>
+</svg>

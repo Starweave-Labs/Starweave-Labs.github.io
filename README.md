@@ -27,7 +27,8 @@ A collaborative lab weaving ideas into meaningful projects.
 │   ├── styles.css              # 品牌与响应式样式
 │   ├── constellation.svg       # 原创星点与织线图
 │   ├── favicon.svg             # 品牌图标
-│   └── social-card.svg         # 品牌分享图源文件
+│   ├── social-card.svg         # 品牌分享图源文件
+│   └── social-card.png         # 1200 × 630 分享预览图
 ├── robots.txt
 ├── sitemap.xml
 └── .github/workflows/pages.yml # GitHub Pages 部署
