@@ -117,6 +117,15 @@ class Document(HTMLParser):
 
 def local_target(url: str, source: Path) -> tuple[Path, str] | None:
     parsed = urlsplit(url)
+    # ZUVI is a separate GitHub Pages deployment at this exact project root.
+    # Its SPA fragments belong to that deployment; nested assets remain local checks.
+    if (
+        parsed.scheme == "https"
+        and parsed.netloc == "starweave-labs.github.io"
+        and parsed.path == "/zuvi/"
+        and not parsed.query
+    ):
+        return None
     if parsed.scheme or parsed.netloc:
         if parsed.scheme not in ("http", "https") or parsed.netloc != urlsplit(SITE_URL).netloc:
             return None

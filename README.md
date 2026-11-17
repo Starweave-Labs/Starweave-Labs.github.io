@@ -13,7 +13,7 @@ A collaborative lab weaving ideas into meaningful projects.
 - **作品与实践**：ZUVI 的真实界面预览，以及组件、页面搭建器、文档工作台入口。
 - **参与共创**：从描述问题、Issue 讨论到小步提交与评审。
 
-> ZUVI 仍位于 [`yeyouyuan/zuvi`](https://github.com/yeyouyuan/zuvi)，暂未迁入本组织。本网站不改变其仓库归属、文档地址、发行或安装方式。
+> ZUVI 现为星织实验室的开源项目，源码位于 [`Starweave-Labs/zuvi`](https://github.com/Starweave-Labs/zuvi)，文档位于 <https://starweave-labs.github.io/zuvi/>。已发布的 GitHub Packages `@yeyouyuan/zuvi-*` 1.0.0 保留原有作用域与安装方式；仓库迁移不会将现有包自动改名。
 
 ## 技术与结构
 
@@ -81,7 +81,7 @@ GitHub 官方 Actions 固定到核验过的提交 SHA；部署任务只获得 `p
 欢迎带着真实问题与具体建议来共创，代码、文档、设计和测试都很重要。
 
 - 实验室官网、定位与方向的建议：使用[本仓库 Issues](https://github.com/Starweave-Labs/Starweave-Labs.github.io/issues)。
-- ZUVI 产品问题：使用 [ZUVI Issues](https://github.com/yeyouyuan/zuvi/issues)。
+- ZUVI 产品问题：使用 [ZUVI Issues](https://github.com/Starweave-Labs/zuvi/issues)。
 - 较大的改动先讨论范围，再在独立分支提交 PR；说明改动目的、截图与验证方式。
 
-发布前检查中文内容、外部链接、桌面与窄屏布局、键盘导航，以及关联项目的归属表述。每个项目的许可与贡献规则，以其各自仓库为准。
+发布前检查中文内容、外部链接、桌面与窄屏布局、键盘导航，以及项目仓库与文档地址。每个项目的许可与贡献规则，以其各自仓库为准。
