@@ -10,14 +10,14 @@ A collaborative lab weaving ideas into meaningful projects.
 
 - **共创理念**：伙伴平等、过程开放、认真完成。
 - **探索方向**：产品界面、开发工具与 AI 协作；这些是探索方向，不是已完成的项目清单。
-- **关联项目**：ZUVI 的简介、现有源码与文档入口。
+- **作品与实践**：ZUVI 的真实界面预览，以及组件、页面搭建器、文档工作台入口。
 - **参与共创**：从描述问题、Issue 讨论到小步提交与评审。
 
 > ZUVI 仍位于 [`yeyouyuan/zuvi`](https://github.com/yeyouyuan/zuvi)，暂未迁入本组织。本网站不改变其仓库归属、文档地址、发行或安装方式。
 
 ## 技术与结构
 
-原生 HTML 与 CSS，零构建依赖。页面内容不依赖 JavaScript；没有外部字体、统计脚本、第三方 CDN 或密钥配置。
+原生 HTML 与 CSS，零构建依赖。内容与导航不依赖 JavaScript；没有外部字体、统计脚本、第三方 CDN 或密钥配置。
 
 ```text
 .
@@ -28,13 +28,17 @@ A collaborative lab weaving ideas into meaningful projects.
 │   ├── constellation.svg       # 原创星点与织线图
 │   ├── favicon.svg             # 品牌图标
 │   ├── social-card.svg         # 品牌分享图源文件
-│   └── social-card.png         # 1200 × 630 分享预览图
+│   ├── social-card.png         # 1200 × 630 分享预览图
+│   └── zuvi-preview.jpg        # ZUVI 文档实际界面截图（2026-11-17）
 ├── robots.txt
 ├── sitemap.xml
-└── .github/workflows/pages.yml # GitHub Pages 部署
+├── scripts/check_site.py       # Python 标准库静态校验
+└── .github/workflows/
+    ├── validate.yml           # PR 校验
+    └── pages.yml              # GitHub Pages 校验与部署
 ```
 
-网页采用语义化结构，提供跳转到主要内容的入口、键盘焦点样式与减少动画偏好支持。品牌图形为原创静态 SVG，不是产品的交互界面。
+网页采用语义化结构，提供跳转到主要内容的入口、键盘焦点样式与减少动画偏好支持。品牌星图为原创静态 SVG；ZUVI 项目预览来自公开文档的实际界面，点击后进入可交互的文档站点。
 
 ## 本地预览
 
@@ -46,6 +50,18 @@ python3 -I -m http.server 4178 --bind 127.0.0.1 --directory .
 
 打开 <http://127.0.0.1:4178/>。无需安装依赖或运行构建。
 
+## 本地校验
+
+使用 Python 3.10 或更新版本，在仓库目录运行：
+
+```sh
+python3 -I scripts/check_site.py
+```
+
+校验只使用 Python 标准库，检查 HTML 标签与唯一 ID、标题和必需的 SEO 元数据、本地资源与页面锚点、无障碍标签引用、图片替代文本与尺寸，以及 1200 × 630 PNG 分享图。脚本允许渐进增强 JavaScript，并检查本地脚本引用；不访问外部网站，也不执行 JavaScript。可传入产物目录，例如 `python3 -I scripts/check_site.py _site`。
+
+每个 PR 会运行 `.github/workflows/validate.yml`。静态校验不能代替浏览器验收：提交前仍需检查桌面与手机布局、键盘操作、减少动画偏好，以及关闭 JavaScript 后的主要内容与链接。
+
 ## 部署
 
 仓库名必须保留为 `Starweave-Labs.github.io`，GitHub Pages 使用 **GitHub Actions** 作为部署源。站点发布在组织域名的根路径 `/`，不是 `/zuvi/`。
@@ -54,7 +70,7 @@ python3 -I -m http.server 4178 --bind 127.0.0.1 --directory .
 
 1. 检出源码并配置 Pages。
 2. 将首页、404 页面、SEO 文件和 `assets/` 放入独立 `_site/` 目录。
-3. 上传静态产物，通过 `github-pages` 环境部署。
+3. 对实际 `_site/` 产物执行同一静态校验，通过后上传并在 `github-pages` 环境部署。
 
 GitHub 官方 Actions 固定到核验过的提交 SHA；部署任务只获得 `pages: write` 和 `id-token: write` 等必要权限。产物不包含 `.git/`、工作流、README 或其他仓库管理文件。
 
